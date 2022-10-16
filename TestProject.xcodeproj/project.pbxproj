@@ -78,18 +78,11 @@
 		CB009EAF28D3AE9C003CD4A7 /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				CB3E4A3328FC6FB400DF7285 /* ViewControllers */,
+				CB3E4A3228FC6F9200DF7285 /* Model */,
+				CB3E4A3128FC6F5E00DF7285 /* Network */,
 				CB15C7DC28D8933C00E99B19 /* Extensions */,
-				CB009EB028D3AE9C003CD4A7 /* AppDelegate.swift */,
 				CB009EB228D3AE9C003CD4A7 /* SceneDelegate.swift */,
-				CB009EC628D3B273003CD4A7 /* LoginViewController.swift */,
-				CB009EC428D3AF6E003CD4A7 /* NavigationViewController.swift */,
-				CB009EB428D3AE9C003CD4A7 /* RootViewController.swift */,
-				CB49C43628DB0F7000C45679 /* TableViewController.swift */,
-				CB55765828F592DB008AB844 /* NetworkService.swift */,
-				CBFD9A5528F19F8E00E263AB /* SpinnerViewController.swift */,
-				CBA54A9028EEEF4E00C1A0CA /* DetailViewController.swift */,
-				CBA54A8E28EEDC5A00C1A0CA /* CoinTableViewCell.swift */,
-				CBC90F5A28EDB4C80036749B /* Coin.swift */,
 				CB009EB628D3AE9C003CD4A7 /* Main.storyboard */,
 				CB009EB928D3AE9E003CD4A7 /* Assets.xcassets */,
 				CB009EBB28D3AE9E003CD4A7 /* LaunchScreen.storyboard */,
@@ -101,11 +94,42 @@
 		CB15C7DC28D8933C00E99B19 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CB009EB028D3AE9C003CD4A7 /* AppDelegate.swift */,
 				CB15C7DD28D893A400E99B19 /* UITextField+Extension.swift */,
 				CB15C7DF28D899CB00E99B19 /* UIButton+Extension.swift */,
 				CB3E4A2F28FC623500DF7285 /* TableViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB3E4A3128FC6F5E00DF7285 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CB55765828F592DB008AB844 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CB3E4A3228FC6F9200DF7285 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBC90F5A28EDB4C80036749B /* Coin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB3E4A3328FC6FB400DF7285 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB009EC628D3B273003CD4A7 /* LoginViewController.swift */,
+				CB009EC428D3AF6E003CD4A7 /* NavigationViewController.swift */,
+				CB009EB428D3AE9C003CD4A7 /* RootViewController.swift */,
+				CB49C43628DB0F7000C45679 /* TableViewController.swift */,
+				CBFD9A5528F19F8E00E263AB /* SpinnerViewController.swift */,
+				CBA54A9028EEEF4E00C1A0CA /* DetailViewController.swift */,
+				CBA54A8E28EEDC5A00C1A0CA /* CoinTableViewCell.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
