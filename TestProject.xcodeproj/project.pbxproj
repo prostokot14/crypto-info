@@ -17,6 +17,7 @@
 		CB009EC728D3B273003CD4A7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB009EC628D3B273003CD4A7 /* LoginViewController.swift */; };
 		CB15C7DE28D893A400E99B19 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB15C7DD28D893A400E99B19 /* UITextField+Extension.swift */; };
 		CB15C7E028D899CB00E99B19 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB15C7DF28D899CB00E99B19 /* UIButton+Extension.swift */; };
+		CB3E4A3028FC623500DF7285 /* TableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E4A2F28FC623500DF7285 /* TableViewController+Extension.swift */; };
 		CB49C43728DB0F7000C45679 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49C43628DB0F7000C45679 /* TableViewController.swift */; };
 		CB55765928F592DB008AB844 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55765828F592DB008AB844 /* NetworkService.swift */; };
 		CBA54A8F28EEDC5A00C1A0CA /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA54A8E28EEDC5A00C1A0CA /* CoinTableViewCell.swift */; };
@@ -38,6 +39,7 @@
 		CB009EC628D3B273003CD4A7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB15C7DD28D893A400E99B19 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		CB15C7DF28D899CB00E99B19 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		CB3E4A2F28FC623500DF7285 /* TableViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+Extension.swift"; sourceTree = "<group>"; };
 		CB49C43628DB0F7000C45679 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CB55765828F592DB008AB844 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CBA54A8E28EEDC5A00C1A0CA /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				CB15C7DD28D893A400E99B19 /* UITextField+Extension.swift */,
 				CB15C7DF28D899CB00E99B19 /* UIButton+Extension.swift */,
+				CB3E4A2F28FC623500DF7285 /* TableViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				CB49C43728DB0F7000C45679 /* TableViewController.swift in Sources */,
 				CBC90F5B28EDB4C80036749B /* Coin.swift in Sources */,
 				CB009EC728D3B273003CD4A7 /* LoginViewController.swift in Sources */,
+				CB3E4A3028FC623500DF7285 /* TableViewController+Extension.swift in Sources */,
 				CB009EB328D3AE9C003CD4A7 /* SceneDelegate.swift in Sources */,
 				CB15C7E028D899CB00E99B19 /* UIButton+Extension.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableViewController: UIViewController {
     let coinsTableView = UITableView()
     
     let networkService = NetworkService()
@@ -87,24 +87,5 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         indicator.startAnimating()
         indicator.backgroundColor = .white
         indicator.hidesWhenStopped = true
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrayOfCoins.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "coinCell", for: indexPath) as! CoinTableViewCell
-        cell.coin = arrayOfCoins[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       160
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = DetailViewController(coin: arrayOfCoins[indexPath.row])
-        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
