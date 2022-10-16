@@ -7,8 +7,8 @@
 
 import Foundation
 
-class NetworkService {
-    func request(urlString: String, completion: @escaping (Result<Coin, Error>) -> Void) {
+final class NetworkService {
+    static func request(urlString: String, completion: @escaping (Result<Coin, Error>) -> Void) {
         guard let url = URL(string: urlString) else {
             return
         }
