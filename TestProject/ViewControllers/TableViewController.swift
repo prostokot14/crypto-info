@@ -42,7 +42,26 @@ class TableViewController: UIViewController {
         navigationItem.title = "Coins"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort", style: .done, target: self, action: #selector(sort))
+        setupRightButton()
+    }
+    
+    private func setupRightButton() {
+        let rightButton = UIButton()
+        rightButton.setTitle("Sort by price change", for: .normal)
+        rightButton.setTitleColor(.black, for: .normal)
+        rightButton.addTarget(self, action: #selector(sort), for: .touchUpInside)
+        navigationController?.navigationBar.addSubview(rightButton)
+        rightButton.tag = 1
+        rightButton.frame = CGRect(x: self.view.frame.width, y: 0, width: 120, height: 20)
+        
+        guard let targetView = self.navigationController?.navigationBar else {
+            return
+        }
+
+        rightButton.trailingAnchor.constraint(equalTo: targetView.trailingAnchor, constant: -16).isActive = true
+        rightButton.bottomAnchor.constraint(equalTo: targetView.bottomAnchor, constant: -6).isActive = true
+
+        rightButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func setupAutoLayout() {
