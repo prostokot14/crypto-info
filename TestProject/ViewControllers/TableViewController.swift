@@ -38,8 +38,11 @@ class TableViewController: UIViewController {
             self.navigationController?.edgesForExtendedLayout = []
         }
         
+        navigationController?.navigationBar.tintColor = .black
         navigationItem.title = "Coins"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort", style: .done, target: self, action: #selector(sort))
     }
     
     private func setupAutoLayout() {
@@ -64,7 +67,7 @@ class TableViewController: UIViewController {
         for name in names {
             group.enter()
             let urlString = "https://data.messari.io/api/v1/assets/\(name)/metrics"
-            networkService.request(urlString: urlString) { [weak self] result in
+            NetworkService.request(urlString: urlString) { [weak self] result in
                 switch result {
                 case .success(let coin):
                     self?.arrayOfCoins.append(coin)
@@ -87,5 +90,12 @@ class TableViewController: UIViewController {
         indicator.startAnimating()
         indicator.backgroundColor = .white
         indicator.hidesWhenStopped = true
+    }
+    
+    @objc func sort() {
+        arrayOfCoins.sort {
+            $0.data?.market_data?.percent_change_usd_last_24_hours ?? -1 < $1.data?.market_data?.percent_change_usd_last_24_hours ?? -1
+        }
+        self.coinsTableView.reloadData()
     }
 }
