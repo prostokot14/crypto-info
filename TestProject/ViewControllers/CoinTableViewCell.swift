@@ -64,7 +64,6 @@ class CoinTableViewCell: UITableViewCell {
     let priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.backgroundColor = UIColor(red: 0.2731372549, green: 0.5647058824, blue: 0.1392156863, alpha: 1)
         label.layer.borderWidth = 1
         label.clipsToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -82,7 +81,6 @@ class CoinTableViewCell: UITableViewCell {
     let changeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.backgroundColor = UIColor(red: 0.2431372549, green: 0.7647058824, blue: 0.8392156863, alpha: 1)
         label.layer.borderWidth = 1
         label.clipsToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -92,7 +90,7 @@ class CoinTableViewCell: UITableViewCell {
     let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true // this will make sure its children don't go out of the boundary
+        view.clipsToBounds = true
         return view
     }()
     
@@ -102,7 +100,6 @@ class CoinTableViewCell: UITableViewCell {
         nameLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 70).isActive = true
         
-        containerView.backgroundColor = .systemRed
         containerView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         containerView.leadingAnchor.constraint(equalTo: self.nameLabel.trailingAnchor, constant: 10).isActive = true
         containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true

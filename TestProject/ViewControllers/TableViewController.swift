@@ -9,21 +9,17 @@ import UIKit
 
 class TableViewController: UIViewController {
     let coinsTableView = UITableView()
+    var indicator = UIActivityIndicatorView()
     
     let networkService = NetworkService()
     
     var arrayOfCoins: [Coin] = []
     
-    var indicator = UIActivityIndicatorView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationBar()
-        
         view.addSubview(coinsTableView)
         setupAutoLayout()
-        
         doRequest()
     }
     
@@ -42,26 +38,7 @@ class TableViewController: UIViewController {
         navigationItem.title = "Coins"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        setupRightButton()
-    }
-    
-    private func setupRightButton() {
-        let rightButton = UIButton()
-        rightButton.setTitle("Sort by price change", for: .normal)
-        rightButton.setTitleColor(.black, for: .normal)
-        rightButton.addTarget(self, action: #selector(sort), for: .touchUpInside)
-        navigationController?.navigationBar.addSubview(rightButton)
-        rightButton.tag = 1
-        rightButton.frame = CGRect(x: self.view.frame.width, y: 0, width: 120, height: 20)
-        
-        guard let targetView = self.navigationController?.navigationBar else {
-            return
-        }
-
-        rightButton.trailingAnchor.constraint(equalTo: targetView.trailingAnchor, constant: -16).isActive = true
-        rightButton.bottomAnchor.constraint(equalTo: targetView.bottomAnchor, constant: -6).isActive = true
-
-        rightButton.translatesAutoresizingMaskIntoConstraints = false
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort by price change", style: .plain, target: self, action: #selector(sort))
     }
     
     private func setupAutoLayout() {
@@ -79,10 +56,10 @@ class TableViewController: UIViewController {
     
     func doRequest() {
         let names = ["btc", "eth", "tron", "luna", "polkadot", "dogecoin", "tether", "stellar", "cardano", "xrp"]
-        let group = DispatchGroup()
         
         activateIndicator()
 
+        let group = DispatchGroup()
         for name in names {
             group.enter()
             let urlString = "https://data.messari.io/api/v1/assets/\(name)/metrics"

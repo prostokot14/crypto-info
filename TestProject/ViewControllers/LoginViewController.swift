@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     
     @objc func logIn() {
         if unameTxtField.text == login && pwordTxtField.text == password {
-            print("OK")
+            print("Login success")
             UserDefaults.standard.set(true, forKey: "LOGGED_IN")
             
             let tableVC = TableViewController()
@@ -67,17 +67,6 @@ class LoginViewController: UIViewController {
             
             setupAutoLayout()
         }
-        
-//        view.backgroundColor = .white
-//
-//        loginContentView.addSubview(unameTxtField)
-//        loginContentView.addSubview(pwordTxtField)
-//        loginContentView.addSubview(btnLogin)
-//        view.addSubview(loginContentView)
-//
-//        setupAutoLayout()
-        
-        
     }
     
     private func setupAutoLayout() {
